@@ -1,4 +1,0 @@
-logs/*
-plugins/*
-.env
-pipeline/config.py
