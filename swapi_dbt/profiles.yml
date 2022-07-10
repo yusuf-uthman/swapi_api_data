@@ -1,0 +1,21 @@
+swapi_dbt:
+  outputs:
+    dev:
+      type: postgres
+      threads: 3
+      host: '192.168.102.52'
+      port: 5432
+      user: root
+      pass: root
+      dbname: swapi
+      schema: uthman_dev
+    prod:
+      type: postgres
+      threads: 3
+      host: '192.168.102.52'
+      port: 5432
+      user: root
+      pass: root
+      dbname: swapi
+      schema: uthman_prod
+  target: dev

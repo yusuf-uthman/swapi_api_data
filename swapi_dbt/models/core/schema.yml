@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: dim_film_oldest_character
+    description: >
+    
+  - name: stg_scd_swapi_data
+    description: >

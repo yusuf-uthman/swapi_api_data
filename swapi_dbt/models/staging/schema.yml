@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+    - name: staging
+      database: swapi
+      schema: api_schema
+      tables:
+        - name: swapi_data
+        # - name: swapi_data
+         # freshness:
+           # error_after: {count: 6, period: hour}
