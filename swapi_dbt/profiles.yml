@@ -3,19 +3,19 @@ swapi_dbt:
     dev:
       type: postgres
       threads: 3
-      host: '192.168.102.52'
+      host: "{{ env_var('HEROKU_DEMO_PG_HOST') }}"
       port: 5432
-      user: root
-      pass: root
-      dbname: swapi
+      user: "{{ env_var('HEROKU_DEMO_PG_USER') }}"
+      pass: "{{ env_var('HEROKU_DEMO_PG_PASS') }}"
+      dbname: "{{ env_var('HEROKU_DEMO_PG_DB') }}"
       schema: uthman_dev
     prod:
       type: postgres
       threads: 3
-      host: '192.168.102.52'
+      host: "{{ env_var('HEROKU_DEMO_PG_HOST') }}"
       port: 5432
-      user: root
-      pass: root
-      dbname: swapi
+      user: "{{ env_var('HEROKU_DEMO_PG_USER') }}"
+      pass: "{{ env_var('HEROKU_DEMO_PG_PASS') }}"
+      dbname: "{{ env_var('HEROKU_DEMO_PG_DB') }}"
       schema: uthman_prod
   target: dev
