@@ -2,7 +2,7 @@ version: 2
 
 sources:
     - name: staging
-      database: swapi
+      database: de4jsjsel5i78g
       schema: api_schema
       tables:
         - name: swapi_data
