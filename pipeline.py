@@ -4,11 +4,20 @@ import requests
 # from starwardob import starwardob
 
 # import postgres db credentials fron config file
-password = config.password
-user = config.user
-db = config.db
-port = config.port
-host = config.host
+# password = config.password
+# user = config.user
+# db = config.db
+# port = config.port
+# host = config.host
+
+# credentials and variables from github secret
+port     = int(os.environ.get("HEROKU_DEMO_PG_PORT"))
+schema   = os.environ.get("HEROKU_DEMO_PG_SCHEMA")
+table    = os.environ.get("HEROKU_DEMO_PG_TABLE")
+password = os.environ.get("HEROKU_DEMO_PG_PASS")
+user     = os.environ.get("HEROKU_DEMO_PG_USER")
+db       = os.environ.get("HEROKU_DEMO_PG_DB")
+host     = os.environ.get("HEROKU_DEMO_PG_HOST")
 
 # # create a connection to postgres database
 engine = create_engine(f'postgresql://{user}:{password}@{host}:{port}/{db}')
@@ -16,8 +25,8 @@ conn   = engine.raw_connection()
 cursor = conn.cursor()
 
 #variables
-schema  = 'api_schema'
-table = 'swapi_data'
+# schema  = 'api_schema'
+# table = 'swapi_data'
 
 # main function that calls all other functions
 def process_api_data(schema, table):
