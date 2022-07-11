@@ -35,4 +35,5 @@ jobs:
         run: python pipeline.py
         
       - name: run dbt
+        run: CD swapi_dbt
         run: dbt build --profiles-dir .
