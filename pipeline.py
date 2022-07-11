@@ -59,7 +59,7 @@ def create_table(schema, table):
                     ,skin_color   varchar(200)
                     ,eye_color    varchar(200)
                     ,birth_year   varchar(200)
-                    ,age          int                    
+                    ,age          varchar(200)              
                     ,gender       varchar(200)
                     ,homeworld    varchar(200)
                     ,films        int
