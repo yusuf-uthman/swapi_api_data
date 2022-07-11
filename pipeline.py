@@ -1,7 +1,8 @@
 import requests
 from sqlalchemy import create_engine
 import requests
-# from starwardob import starwardob
+import os
+from starwardob import starwardob
 
 # import postgres db credentials fron config file
 # password = config.password
