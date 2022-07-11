@@ -10,6 +10,7 @@ select
     ,skin_color
     ,eye_color
     ,birth_year
+    ,age
     ,gender
     ,homeworld
     ,films
@@ -29,6 +30,7 @@ final as (
     select 
         name
         ,height
+        ,age
         ,species
         ,homeworld
         ,gender
