@@ -9,6 +9,7 @@ SELECT
     ,skin_color
     ,eye_color
     ,birth_year
+    ,case when age = 'unknown' then NULL else CAST(age as INT) end as age    
     ,case when gender in ('n/a','none') then NULL else gender end as gender
     ,homeworld
     ,films
